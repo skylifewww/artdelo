@@ -1,0 +1,8 @@
+{
+  "name": "iosdevcourse",
+  "description": "IOS Development Course.",
+  "image": "heroku/python",
+  "repository": "https://",
+  "keywords": ["ios", "swift" ],
+  "addons": [ "heroku-postgresql" ]
+}

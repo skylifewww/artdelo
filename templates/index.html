@@ -1,0 +1,175 @@
+{% load staticfiles %}
+
+{% load content_tags %}
+{% load category_tags %}
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+
+ <head>
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <title>{% meta_title %}</title>
+ 
+  <meta name="description" content="{% meta_description %}">
+
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <meta name="keywords" content="{% meta_keywords %}"/>
+   
+    <meta name="author" content="{% meta_author %}"/>
+   
+    
+    <link rel="shortcut icon" href="{% static 'art_delo/img/logo/favicon.ico' %}"/> 
+    
+    {# <link rel="stylesheet" type="text/css" href="{% static 'art_delo/css/reset.css' %}"/> #}
+  
+  <link href="{% static 'art_delo/css/slider.css' %}" rel="stylesheet" type="text/css" > 
+  <link href="{% static 'art_delo/css/style_0.css' %}" rel="stylesheet" type="text/css" > 
+
+  <link rel="stylesheet" type="text/css" href="{% static 'art_delo/css/normalize.css' %}"/>
+  <link rel="stylesheet" type="text/css" href="{% static 'art_delo/css/fonts/font-awesome-4.3.0/css/font-awesome.min.css' %}"/>
+  <link rel="stylesheet" type="text/css" href="{% static 'art_delo/css/demo.css' %}"/>
+  <link rel="stylesheet" type="text/css" href="{% static 'art_delo/css/style2.css' %}"/>
+
+  <script src="{% static 'art_delo/js/modernizr-custom.js' %}"></script> 
+  <script src="{% static 'art_delo/js/script.js' %}" type="text/javascript"></script> 
+  <script src="{% static 'art_delo/js/menu.js' %}" type="text/javascript"></script>  
+  <script src="{% static 'art_delo/js/jquery-1.11.0.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'art_delo/js/jquery-ui-1.10.4.min.js' %}" type="text/javascript"></script> <!-- jQuery -->
+<script src="{% static 'art_delo/js/jquery.nicescroll.js' %}" type="text/javascript"></script> <!-- jQuery NiceScroll -->
+<script src="{% static 'art_delo/js/jquery.sticky.js' %}" type="text/javascript"></script> <!-- jQuery Stick Menu -->
+<script src="{% static 'art_delo/js/masonry.pkgd.min.js' %}" type="text/javascript"></script> <!-- All script -->
+<script src="{% static 'art_delo/js/imagesloaded.pkgd.min.js' %}" type="text/javascript"></script> <!-- All script --> 
+
+ </head> 
+
+ <body> 
+
+
+ <!-- Container-->
+
+  <div id="container">
+
+
+
+   <!-- Top-->
+
+	<div id="top">
+ <!-- Расскомментировать когда в админку введены пункты шапки --> 
+ <img src="{% top_image_back %}">
+<!-- Расскомментировать когда в админку введены пункты шапки --> 
+
+  {# <h1>{% top_text_small %}</h1> #}
+
+  {# <h1>{% top_text_big %}</h1> #}
+ <!-- Расскомментировать когда в админку введены пункты шапки --> 
+	</div>
+
+
+
+   <!-- Slider-->
+
+	<div class="ism-slider" data-play_type="loop" id="my-slider">
+  <ol>
+
+  {% if current_category %} 
+  {% for slide in current_category.get_slides %}
+   <li>
+      <img src="{{ slide.slug }}">
+    </li>
+
+ {% endfor %}  
+
+ {% else %}
+
+  {% get_main_slides %}
+
+   {% endif %}  
+  
+  </ol>
+  </div>
+
+
+   <!-- Menu-->
+
+<div id="win">
+   <div id="leftcol">
+		<div id="menu">
+    <!-- Расскомментировать когда в админку введены пункты меню --> 
+
+
+{% left_vert_menu %}
+
+ <!-- Закомментировать когда в админку введены пункты меню --> 
+
+{# <li id="menu_botton"><a href="/">Главная1</a> #}
+      {# </li> #}
+      {# <li id="menu_botton"><a href="/articles/page/">Статьи1</a> #}
+      {# </li> #}
+      {# <li id="menu_botton"><a href="/articles/catalog/">Каталог1</a> #}
+      {# </li> #}
+      {# <li id="menu_botton"><a href="/contact/">Контакты1</a> #}
+      {# </li> #}
+<!-- Закомментировать когда в админку введены пункты меню --> 
+    
+       
+          {% if username %}
+                <li id="menu_botton"><a href="/auth/logout/">Выйти ({{ username }})</a></li>
+            {% else %}
+                <li id="menu_botton"><a href="/auth/login/">Войти</a></li>
+            {% endif %}
+		</div>
+   <img src="{% static 'art_delo/img/uz.png' %}" width= 300px id="uz">
+   </div>
+
+
+
+  <!-- Content-->  
+
+{% block callactions %}{% endblock %}
+
+{% block catalog %}{% endblock %}
+
+{% block article %}{% endblock %}
+{% block article_id %}{% endblock %}
+{% block login %}{% endblock %}
+
+
+    <!-- Footer-->
+
+   <div id="footer"><p id="cop">&copy; Art-Дело</p>
+   </div>
+  </div>
+
+  <!-- Scripts -->
+  
+
+   <script>
+     $(function(){
+   
+       var $container = $('.grid');
+     
+       $container.imagesLoaded( function(){
+         $container.masonry({
+           itemSelector : 'li'
+         });
+       });
+     
+     });
+   </script>
+  {# // <script src="{% static 'art_delo/js/jquery.parallax.js' %}" type="text/javascript"></script> <!-- jQuery Parallax -->   #}
+ 
+  <script id="dsq-count-scr" src="//artdelored.disqus.com/count.js" async></script>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+@font-face {
+font-family: Helvetica_1; /* Присваиваем имя шрифту */
+src:url(fonts/H_.otf) /* Путь к шрифту в формате TTF */
+}
+@font-face {
+font-family: Helvetica_cyr; /* Присваиваем имя шрифту */
+src:url(fonts/N_C.otf) /* Путь к шрифту в формате TTF */
+}
+@font-face {
+font-family: Helvetica_cyr; /* Присваиваем имя шрифту */
+font-weight: bold;
+src:url(fonts/N_C_B.otf) /* Путь к шрифту в формате TTF */
+}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,cyrillic-ext,cyrillic);
+
+   #container {
+    width: 1200px; /* Общая ширина макета */
+	margin:0 auto;/* Выравниваем по центру */
+	height: 100%;
+	position: relative;}
+	
+   #win{
+    width: 1200px;
+    height: calc(100% - 554px);
+	margin:0;
+	/*margin-bottom: 50px;*/
+	position: relative;}
+	
+   #leftcol { /* Левая колонка*/
+    position: absolute;
+    width: 300px; /* Ширина слоя */ 
+	height: 100%;	
+	margin-bottom: 350px;
+    color: white; /* Цвет текста*/ 
+	background-image: url(../img/bg_2.jpg);
+    background-repeat: repeat;	}
+	
+   #rightcol { /* Правая колонка*/ 
+    background: #e0e0e0; /* Цвет фона правой колонки */ 
+
+    background-repeat: repeat-scroll;
+    margin-left: 300px; /* Отступ слева */
+    margin-bottom: 300px;
+    min-height: 97.5vh;
+    height: 100%;
+	width: 900px;} 
+	
+   #top { /* Верх */ 
+   
+    height: 114px;
+	width: 1200px;}
+	
+   #footer {
+    /*position:absolute;*/
+    position:relative;
+    /*bottom:0;*/
+    /*margin-top: 300px;*/
+	margin-bottom: 0px;
+   background: #cc0000;
+   left: 0; bottom: 0; /* Левый нижний угол */
+   color: #fff; /* Цвет текста */
+   width: 1200px; /* Ширина слоя */
+   z-index: 15;}
+   
+   #cop{   
+    padding: 5px; /* Поля вокруг текста */ 
+    margin: 0;  /* Убираем отступы */
+	font-family: serif;
+	font-weight: normal;}
+
+	#list{
+	list-style-type: square;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 1.6;}
+   
+    hr {
+    border: none; /* Убираем границу */
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: 354px;
+	margin-right: 354px;
+    background-color: #990000; /* Цвет линии */
+    color: #990000; /* Цвет линии для IE6-7 */
+    height: 2px; /* Толщина линии */
+   }
+   
+   #l_line {
+    border: none; /* Убираем границу */
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: 354px;
+	margin-right: 354px;
+    background-color: #990000; /* Цвет линии */
+    color: #990000; /* Цвет линии для IE6-7 */
+    height: 2px; /* Толщина линии */}
+   
+   li {
+    list-style-type: none; /* Убираем маркеры */
+	font-size: 18px;}
+	
+	p {
+    padding: 10px; /* Поля вокруг текста */ 
+    margin: 0;  /* Убираем отступы */
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 1.6;}	
+	
+	#coment{
+	background-color: #ffffff;}
+   
+    #uz {
+	position: absolute;
+	z-index: 1;}
+	
+	#cit{
+	margin-top: 15px;}
+	
+	#zag{
+	margin-top: 15px;
+	margin-left: 24.5px;
+	margin-right: 24.5px;}
+	
+	#menu {
+    font-face: sans-serif;
+	position: absolute;
+	top: 559;
+	width: 300px;
+	z-index: 2;}
+	
+	#menu.fixed {
+	font-face: sans-serif;
+	position: fixed;
+	top: 0px;
+	width: 300px;
+	z-index: 2;}
+	
+	#menu_botton {
+	font-face: sans-serif;
+	font-weight: bold;
+	background-color: rgba(0,0,1,0.3);
+	padding: 10px;
+	padding-left: 40px;
+	margin-top: 3px;}
+	
+	#menu li:hover{
+	background-color: rgba(255,255,255,0.2);}
+	
+	a:link	{
+	text-decoration: none;
+	color: #fff; }
+	
+	a:visited	{
+	text-decoration: none;
+	color: #fff; }
+	
+	a:active	{
+	text-decoration: none;
+	color: #f00; }
+	
+	a:hover	{
+	text-decoration: none;
+	color: #fff; }
+	
+	.page {
+	color: #fff;}

@@ -1,0 +1,9 @@
+[run]
+source = iosDevCourse
+omit =
+    *init*
+    *urls*
+    *filldb*
+
+[report]
+show_missing = true
