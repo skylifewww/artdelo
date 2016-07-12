@@ -7,7 +7,7 @@ BASE_DIR = Path()
 def rel(*x):
     return str(BASE_DIR.joinpath(*x).absolute())
 
-DEBUG = False
+DEBUG = True
 DOMAIN = 'localhost:8000'
 
 APPEND_SLASH = True
