@@ -12,7 +12,7 @@ DOMAIN = 'localhost:8000'
 
 APPEND_SLASH = True
 # ALLOWED_HOSTS = ['artdelored.herokuapp.com', DOMAIN]
-ALLOWED_HOSTS = ['artdelored.herokuapp.com']
+ALLOWED_HOSTS = ['art-delo.herokuapp.com']
 
 USE_X_FORWARDED_HOST = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTOCOL', 'https')
