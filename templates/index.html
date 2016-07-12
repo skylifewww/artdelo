@@ -12,23 +12,21 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-  <title>{% meta_title %}</title>
+  {# <title>{% meta_title %}</title> #}
  
-  <meta name="description" content="{% meta_description %}">
+ {# <meta name="description" content="{% meta_description %}"> #}
 
 
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
-    <meta name="keywords" content="{% meta_keywords %}"/>
+  {#  <meta name="keywords" content="{% meta_keywords %}"/> #}
    
-    <meta name="author" content="{% meta_author %}"/>
+   {# <meta name="author" content="{% meta_author %}"/> #}
    
     
     <link rel="shortcut icon" href="{% static 'art_delo/img/logo/favicon.ico' %}"/> 
-    
-    {# <link rel="stylesheet" type="text/css" href="{% static 'art_delo/css/reset.css' %}"/> #}
   
   <link href="{% static 'art_delo/css/slider.css' %}" rel="stylesheet" type="text/css" > 
   <link href="{% static 'art_delo/css/style_0.css' %}" rel="stylesheet" type="text/css" > 
@@ -63,7 +61,7 @@
 
 	<div id="top">
  <!-- Расскомментировать когда в админку введены пункты шапки --> 
- <img src="{% top_image_back %}">
+{# <img src="{% top_image_back %}"> #}
 <!-- Расскомментировать когда в админку введены пункты шапки --> 
 
   {# <h1>{% top_text_small %}</h1> #}
@@ -79,19 +77,19 @@
 	<div class="ism-slider" data-play_type="loop" id="my-slider">
   <ol>
 
-  {% if current_category %} 
-  {% for slide in current_category.get_slides %}
-   <li>
-      <img src="{{ slide.slug }}">
-    </li>
+{# {% if current_category %} #}
+{#  {% for slide in current_category.get_slides %} #}
+ {#  <li> #}
+   {#   <img src="{{ slide.slug }}"> #}
+   {# </li> #}
 
- {% endfor %}  
+{# {% endfor %} #}  
 
- {% else %}
+{# {% else %} #}
 
-  {% get_main_slides %}
+ {# {% get_main_slides %} #}
 
-   {% endif %}  
+ {#  {% endif %} #} 
   
   </ol>
   </div>
@@ -105,7 +103,7 @@
     <!-- Расскомментировать когда в админку введены пункты меню --> 
 
 
-{% left_vert_menu %}
+{# {% left_vert_menu %} #}
 
  <!-- Закомментировать когда в админку введены пункты меню --> 
 
