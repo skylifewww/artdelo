@@ -47,7 +47,7 @@ class Category(MPTTModel):
         verbose_name_plural = "Категории"
         ordering = ('tree_id','level')
 
-    def __str__(self):
+    def __unicode__(self):
         return self.name
 
     class MPTTMeta:
@@ -71,7 +71,7 @@ class Author(MPTTModel):
         verbose_name_plural = "Авторы"
         ordering = ('tree_id', 'level')
 
-    def __str__(self):
+    def __unicode__(self):
         return self.name
 
     def pic_slug(self):
@@ -99,7 +99,7 @@ class Tag(models.Model):
         verbose_name = "теги"
         verbose_name_plural = "тег"
 
-    def __str__(self):
+    def __unicode__(self):
         return self.tag_name
 
 
@@ -117,7 +117,7 @@ class Works(models.Model):
         verbose_name = "Примеры"
         verbose_name_plural = "Примеры"
 
-    def __str__(self):
+    def __unicode__(self):
         return self.work_title
 
     # def pic(self):
@@ -153,7 +153,7 @@ class Article(models.Model):
     article_video = EmbedVideoField(verbose_name='Видео', blank=True, help_text='URL video', null=True)
     video_published = models.BooleanField( blank=True, default="")
 
-    def __str__(self):
+    def __unicode__(self):
         return self.article_title
 
     class Meta:
