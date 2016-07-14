@@ -33,8 +33,8 @@ class Menu(models.Model):
     
 class MenuItem(MPTTModel):
     menu = models.ForeignKey(Menu,null=True, blank=True, verbose_name=u"Меню")
-    name = models.CharField(max_length=200, verbose_name="Название")
-    slug = models.CharField(max_length=250, blank=True, verbose_name="Урл")
+    name = models.CharField(max_length=200, verbose_name=u"Название")
+    slug = models.CharField(max_length=250, blank=True, verbose_name=u"Урл")
     full_text = RichTextField(blank=True, verbose_name="Полное описание")
     parent = TreeForeignKey('self', null=True, blank=True, related_name='children', verbose_name=u"Родительский пункт меню")
     published = models.BooleanField(verbose_name="Опубликован")
@@ -71,15 +71,15 @@ class MenuItem(MPTTModel):
 
     
 class Meta(models.Model):
-    meta_description = RichTextField(blank=True, verbose_name="Мета описание")
-    meta_keywords = models.CharField(max_length=250, blank=True, verbose_name="Ключевые слова")
-    meta_title = models.CharField(max_length=250, blank=True, verbose_name="Заголовок в браузере")
-    meta_author = models.CharField(max_length=250, blank=True, verbose_name="Автор сайта")
+    meta_description = RichTextField(blank=True, verbose_name=u"Мета описание")
+    meta_keywords = models.CharField(max_length=250, blank=True, verbose_name=u"Ключевые слова")
+    meta_title = models.CharField(max_length=250, blank=True, verbose_name=u"Заголовок в браузере")
+    meta_author = models.CharField(max_length=250, blank=True, verbose_name=u"Автор сайта")
     # favicon = models.ImageField(upload_to=make_upload_path, blank=True,  verbose_name="favicon.ico")
     favicon_slug = models.CharField(max_length=250, blank=True, verbose_name="Урл favicon")
     published = models.BooleanField(verbose_name="Опубликован", blank=True, default=0)
 
-    def __str__(self):
+    def __unicode__(self):
         return self.meta_title
 
     class Meta:
