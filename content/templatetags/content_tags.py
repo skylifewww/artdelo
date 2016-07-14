@@ -68,7 +68,7 @@ def top_text_big():
 def left_vert_menu():
     
     # menu = Menu.objects.get(pk=5)
-    menu = Menu.objects.get(pk=1)
+    menu = Menu.objects.get(pk=2)
     items = MenuItem.objects.filter(menu=menu, published=1).order_by('ordering')
     return {'items': items}
 
