@@ -19,7 +19,7 @@
 
 {# {% if article.video_published %} #}
     
-            {% video article.article_video '220x160' %}
+          {#  {% video article.article_video '220x160' %}#}
 {# {% else %}  #}
 
     {# {% if article.image %} #}
@@ -69,7 +69,7 @@
     {# {% else %} #}
     {# <h6>{{ article.article_title }}</h6> #}
     {# {% endif %} #}
-
+{% video article.article_video '220x160' %}
     <img src="{{ article.slug }}" width="480px">
     <div class="clear"></div>  
         <h10>{{ article.short_text|safe }}</h10>
