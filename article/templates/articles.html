@@ -15,36 +15,6 @@
 <div class="txt">
 {% for article in articles %}
 
-{# <div class="img"> #}
-
-{# {% if article.video_published %} #}
-    
-          {#  {% video article.article_video '220x160' %}#}
-{# {% else %}  #}
-
-    {# {% if article.image %} #}
-
-        {# {% if current_category or current_author or current_tag %} #}
-
-            
-
-        {# {% else %}  #}
-
-            {# <img src="{{MEDIA_URL}}{{ article.image.url}}" width="220px" height="160px"> #}
-
-        {# {% endif %}     #}
-            
-    {# {% else %}     #}
-
-            {# <img src="{% static 'blog/img/image_fix.png' %}" width="220px" height="160px">     #}
-
-    {# {% endif %} #}
-    
-{# {% endif %} #}
-
-    {# </div> #}
-{# <div class="text"> #}
-
 <div class="clear"></div>
 <p></p>
 
@@ -75,33 +45,13 @@
     {% video article.article_video '480x270' %}
  {% else %} 
   <img src="{{ article.slug }}" width="480px">
-    {# {% if article.image %} #}
-
-        {# {% if current_category or current_author or current_tag %} #}
-
-            
-
-        {# {% else %}  #}
-
-            {# <img src="{{MEDIA_URL}}{{ article.image.url}}" width="220px" height="160px"> #}
-
-        {# {% endif %}     #}
-            
-    {# {% else %}     #}
-
-            {# <img src="{% static 'blog/img/image_fix.png' %}" width="220px" height="160px">     #}
-
-    {% endif %} 
+{% endif %} 
     
-{# {% endif %} #}
-{% video article.article_video '480x270' %}
-    <img src="{{ article.slug }}" width="480px">
     <div class="clear"></div>  
         <h10>{{ article.short_text|safe }}</h10>
         <div class="clear"></div>
 <hr>
     
-{# </div> #}
 
 <div class="clear"></div>
 
