@@ -68,7 +68,7 @@ def top_text_big():
 def left_vert_menu():
     
     # menu = Menu.objects.get(pk=5)
-    menu = Menu.objects.get(pk=2)
+    menu = Menu.objects.get(pk=3) # for art-delo.herokuapp.com
     items = MenuItem.objects.filter(menu=menu, published=1).order_by('ordering')
     return {'items': items}
 
