@@ -2,7 +2,10 @@
 {% load staticfiles %}
 {% load mptt_tags %}
 {% load i18n mptt_tags %}
+{% load embed_video_tags %}
 
+    
+          {#  {% video article.article_video '220x160' %}#}
 
 {% block article_id %}
 
@@ -58,6 +61,7 @@
 <h1>{{ article.article_title }}</h1>
 
 <div class="clear"></div>  
+{% video article.article_video '480x270' %}
 <img src="{{ article.slug }}" width="480px">
 
 <p><h6>{{ article.full_text|safe }}</h6></p>
