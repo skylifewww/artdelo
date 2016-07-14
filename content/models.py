@@ -25,7 +25,7 @@ def make_upload_path(instance, filename, prefix = False):
 class Menu(models.Model):
     name = models.CharField(max_length=200, verbose_name=u"Название")
     
-    def __str__(self):
+    def __unicode__(self):
         return self.name
     class Meta:
         verbose_name_plural = u"Меню"
@@ -40,7 +40,7 @@ class MenuItem(MPTTModel):
     published = models.BooleanField(verbose_name="Опубликован")
     ordering = models.IntegerField(verbose_name="Порядок сортировки", default=0, blank=True, null=True)
 
-    def __str__(self):
+    def __unicode__(self):
         return self.name
 
     class Meta:
@@ -110,7 +110,7 @@ class Snipet(models.Model):
     published = models.BooleanField(verbose_name="Опубликован")
     ordering = models.IntegerField(verbose_name="Порядок сортировки", default=0, blank=True, null=True)
 
-    def __str__(self):
+    def __unicode__(self):
         return self.name
 
     class Meta:
@@ -126,7 +126,7 @@ class Top(models.Model):
     published = models.BooleanField(verbose_name="Опубликован")
     
      
-    def __str__(self):
+    def __unicode__(self):
         return self.text_small
 
     class Meta:
