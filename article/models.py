@@ -107,8 +107,8 @@ class Works(models.Model):
     work_author = models.CharField(max_length=50, verbose_name=u"автор", blank=True, null=True, default="")
     work_category = TreeForeignKey(Category, related_name="works", verbose_name=u"Категории", default="", blank=True)
     # image = ThumbnailerImageField(upload_to=make_upload_path2, blank=True, verbose_name="картинка")
-    slug = models.CharField(max_length=250, blank=True, verbose_name="Урл")
-    short_text = RichTextUploadingField(blank=True, verbose_name="Короткое описание")
+    slug = models.CharField(max_length=250, blank=True, verbose_name=u"Урл")
+    short_text = RichTextUploadingField(blank=True, verbose_name=u"Короткое описание")
     work_title = models.CharField(max_length=50, verbose_name=u"Название товара")
     work_price = models.CharField(max_length=50, verbose_name=u"цена работы", blank=True, null=True, default="")
 
@@ -182,7 +182,7 @@ class Article(models.Model):
 
 class Slide(models.Model):
     category = TreeForeignKey(Category, related_name="slides_article", verbose_name=u"Категория", default="", blank=True, null=True)
-    name = models.CharField(max_length=250, verbose_name="Название")
+    name = models.CharField(max_length=250, verbose_name=u"Название")
     # image = models.ImageField(upload_to=make_upload_path, blank=True,  verbose_name="Изображение")
     slug = models.CharField(max_length=250, blank=True, verbose_name="Урл")
     text = RichTextUploadingField(blank=True, verbose_name="Короткое описание RU")
@@ -191,7 +191,7 @@ class Slide(models.Model):
     ordering = models.IntegerField(verbose_name="Порядок сортировки", default=0, blank=True, null=True)
     
         
-    def __str__(self):
+    def __unicode__(self):
         return self.name
 
     # def pic(self):
