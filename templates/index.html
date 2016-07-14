@@ -77,19 +77,19 @@
 	<div class="ism-slider" data-play_type="loop" id="my-slider">
   <ol>
 
-{% if current_category %}
- {% for slide in current_category.get_slides %}
-   <li> 
-     <img src="{{ slide.slug }}"> 
-    </li> 
+<!--{% if current_category %}-->
+ <!--{% for slide in current_category.get_slides %}-->
+   <!--<li> -->
+     <!--<img src="{{ slide.slug }}"> -->
+    <!--</li> -->
 
- {% endfor %}   
+ <!--{% endfor %}   -->
 
- {% else %} 
+ <!--{% else %} -->
 
  {% get_main_slides %} 
 
-   {% endif %}  
+   <!--{% endif %}  -->
   
   </ol>
   </div>
